@@ -1,0 +1,93 @@
+<% layout("/layouts/boilerplate") %>
+<script>
+  const mapToken = "<%= process.env.MAP_TOKEN %>";
+  const listing = <%- JSON.stringify(listing)%>;
+
+</script>
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="card col-6 offset-3 show-card listing-card">
+      <h3 class="title-heading"><%= listing.title %></h3>
+      <img
+        class="card-img-top show-img"
+        src="<%= listing.image.url %>"
+        alt="listing_image"
+      />
+      <div class="card-body">
+        <p class="card-text">
+          <p><b>Owned By: </b><%= listing.owner.username.charAt(0).toUpperCase() + listing.owner.username.slice(1) %></p>
+          <p><b>Description:</b><br><%= listing.description %></p>
+          <p><b>Price:</b>&nbsp;&#8377; <%= listing.price.toLocaleString("en-In") %> / night</p>
+          <p><b>Location:</b>&nbsp;<%= listing.location %></p>
+          <p><b>Country:</b>&nbsp;<%= listing.country %></p>
+        </p>
+      </div>
+    </div>
+
+    <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
+      <div class="btns mt-3 col-6 offset-3">
+        <a class="btn btn-dark add-btn me-2" href="/listings/<%= listing._id %>/edit">Edit</a>
+        <form method="post" action="/listings/<%= listing._id %>?_method=DELETE" class="d-inline">
+          <button class="btn btn-dark me-2">Delete</button>
+        </form>
+        <a class="btn btn-dark" href="/listings">Back</a>
+      </div>
+    <% } else { %>
+      <div class="btns mt-3 col-6 offset-3">
+        <a class="btn btn-dark" href="/listings">Back</a>
+      </div>
+    <% } %>
+
+    <!-- Review Section -->
+    <% if(currUser) { %>
+      <div class="col-8 offset-2 mb-3">
+        <hr>
+        <h4>Leave a Review</h4>
+        <form action="/listings/<%= listing._id %>/review" method="post" novalidate class="needs-validation">
+          <div class="mb-3 mt-3">
+            <label for="rating" class="form-label">Rating</label>
+            <input class="form-range" type="range" id="rating" name="review[rating]" min="1" max="5"/>
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="comment">Comments</label>
+            <textarea class="form-control" id="comment" name="review[comment]" cols="30" rows="5" required></textarea>
+            <div class="invalid-feedback">Please add some comment for Review</div>
+          </div>
+          <button class="btn btn-outline-dark btn-dark text-white">Submit</button>
+        </form>
+      </div>
+    <% } %>
+
+    <% if(listing.reviews.length > 0) { %>
+      <div class="col-8 offset-2">
+        <hr>
+        <h4><b>All Reviews</b></h4>
+        <div class="row">
+          <% for(review of listing.reviews) { %>
+            <div class="card col-5 mb-3 ms-3">
+              <div class="card-body">
+                <h5 class="card-title"><b>Created by:</b> <%= review.author.username.charAt(0).toUpperCase() + review.author.username.slice(1) %></h5>
+                <p class="card-text"><b>Comment:</b><br><%= review.comment %></p>
+                <p class="card-text"><b>Rating:</b> <%= review.rating %> star</p>
+              </div>
+              <% if(currUser && currUser._id.equals(review.author._id)) { %>
+                <form class="mb-3" method="POST" action="/listings/<%= listing._id %>/review/<%= review._id %>?_method=DELETE">
+                  <button class="btn btn-sm btn-dark">Delete</button>
+                </form>
+              <% } %>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    <% } %>
+
+    <!-- Map Section -->
+      <div class="col-8 offset-2 mb-3">
+        <hr>
+        <h3>Where you'll be</h3>
+        <div id="map"></div>
+      </div>
+  </div>
+</div>
+
+<script src="/js/map.js"></script>
