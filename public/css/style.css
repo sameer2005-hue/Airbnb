@@ -117,9 +117,8 @@ body {
   padding-right: 0;
 }
 
-
 /* MAP Styling */
-#map{
+#map {
   height: 500px;
   width: 60vw;
 }
@@ -155,11 +154,11 @@ body {
 }
 
 /* tax-info */
-.tax-info{
+.tax-info {
   display: none;
 }
 
-.tax-toggel{
+.tax-toggel {
   border: 2px solid black;
   border-radius: 2rem;
   height: 3rem;
@@ -168,4 +167,74 @@ body {
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
+}
+
+/* Navbar responsiveness for small screens */
+@media (max-width: 767px) {
+  .sticky-top {
+    position: static !important;
+  }
+
+  .navbar-collapse {
+    background-color: white;
+    position: relative !important;
+    z-index: 1000 !important;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav.ms-auto .d-flex {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-nav.ms-auto .search-inp {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-nav.ms-auto .btn-search {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-nav.ms-auto {
+    width: 100%;
+  }
+
+  .navbar-nav.ms-auto .nav-link {
+    text-align: center;
+  }
+}
+
+/* Filters responsiveness for small screens */
+@media (max-width: 767px) {
+  #filters {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .filter {
+    margin-bottom: 0;
+    width: auto;
+    text-align: center;
+    flex: 0 0 auto;
+  }
+
+  .tax-toggel {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+#filters {
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
 }
