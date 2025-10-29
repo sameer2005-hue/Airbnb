@@ -4,16 +4,18 @@ const mongoose = require("mongoose");
 const Listing = require("../models/listing"); // adjust path if needed
 const data = require("./data");
 
-const MONGO_URL = process.env.ATLASDB_URL || process.env.MONGO_URL; // ✅ using your .env variable name
+const MONGO_URL = process.env.ATLASDB_URL; // ✅ using your .env variable name
 
-console.log("MONGO_URL from .env:", MONGO_URL); // 🧠 debug line
+// console.log("MONGO_URL from .env:", MONGO_URL); // 🧠 debug line
 
 async function main() {
   if (!MONGO_URL) {
-    throw new Error("❌ MONGO_URL is undefined! Check your .env file and path.");
+    throw new Error(
+      "❌ MONGO_URL is undefined! Check your .env file and path."
+    );
   }
 
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(MONGO_URL, { family: 4 });
   console.log("✅ Connected to MongoDB Atlas");
 
   await Listing.deleteMany({});

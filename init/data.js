@@ -10,6 +10,8 @@ const sampleListings = [
     price: 1500,
     location: "Malibu",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-118.68561, 34.03688],
@@ -26,6 +28,7 @@ const sampleListings = [
     price: 1200,
     location: "New York City",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-74.005994, 40.712749],
@@ -42,6 +45,7 @@ const sampleListings = [
     price: 1000,
     location: "Aspen",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-106.819217, 39.190681],
@@ -58,6 +62,7 @@ const sampleListings = [
     price: 2500,
     location: "Florence",
     country: "Italy",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [11.256129, 43.771484],
@@ -74,6 +79,7 @@ const sampleListings = [
     price: 800,
     location: "Portland",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-122.678367, 45.515197],
@@ -90,6 +96,7 @@ const sampleListings = [
     price: 2000,
     location: "Cancun",
     country: "Mexico",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-86.85176, 21.16188],
@@ -106,6 +113,7 @@ const sampleListings = [
     price: 900,
     location: "Lake Tahoe",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-119.881, 39.0968],
@@ -122,6 +130,7 @@ const sampleListings = [
     price: 3500,
     location: "Los Angeles",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-118.254187, 34.048051],
@@ -138,6 +147,7 @@ const sampleListings = [
     price: 3000,
     location: "Verbier",
     country: "Switzerland",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [7.229043, 46.096066],
@@ -154,6 +164,7 @@ const sampleListings = [
     price: 4000,
     location: "Serengeti National Park",
     country: "Tanzania",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [34.5, -2.5],
@@ -170,6 +181,7 @@ const sampleListings = [
     price: 1800,
     location: "Amsterdam",
     country: "Netherlands",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [4.9, 52.378],
@@ -186,6 +198,7 @@ const sampleListings = [
     price: 10000,
     location: "Fiji",
     country: "Fiji",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [178.4406, -18.1456],
@@ -202,6 +215,7 @@ const sampleListings = [
     price: 1200,
     location: "Cotswolds",
     country: "United Kingdom",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-1.7, 51.9],
@@ -218,6 +232,7 @@ const sampleListings = [
     price: 2200,
     location: "Boston",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-71.056804, 42.35888],
@@ -234,6 +249,7 @@ const sampleListings = [
     price: 1800,
     location: "Bali",
     country: "Indonesia",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [115.219118, -8.652497],
@@ -250,6 +266,7 @@ const sampleListings = [
     price: 1500,
     location: "Banff",
     country: "Canada",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-115.57096, 51.176613],
@@ -266,6 +283,7 @@ const sampleListings = [
     price: 1600,
     location: "Miami",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-80.1919, 25.773357],
@@ -282,6 +300,7 @@ const sampleListings = [
     price: 3000,
     location: "Phuket",
     country: "Thailand",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [98.38732, 7.88346],
@@ -298,6 +317,7 @@ const sampleListings = [
     price: 4000,
     location: "Scottish Highlands",
     country: "United Kingdom",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-4.5, 57.5],
@@ -314,6 +334,7 @@ const sampleListings = [
     price: 5000,
     location: "Dubai",
     country: "United Arab Emirates",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [55.297558, 25.25809],
@@ -330,6 +351,7 @@ const sampleListings = [
     price: 1100,
     location: "Montana",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-109.172599, 47.072515],
@@ -346,6 +368,7 @@ const sampleListings = [
     price: 2500,
     location: "Mykonos",
     country: "Greece",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [25.326384, 37.446503],
@@ -362,6 +385,7 @@ const sampleListings = [
     price: 750,
     location: "Costa Rica",
     country: "Costa Rica",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-84.200915, 10.257794],
@@ -378,6 +402,7 @@ const sampleListings = [
     price: 1600,
     location: "Charleston",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-79.938628, 32.789284],
@@ -394,6 +419,7 @@ const sampleListings = [
     price: 2000,
     location: "Tokyo",
     country: "Japan",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [139.692526, 35.68882],
@@ -410,6 +436,7 @@ const sampleListings = [
     price: 1200,
     location: "New Hampshire",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-71.578305, 43.689888],
@@ -426,6 +453,7 @@ const sampleListings = [
     price: 6000,
     location: "Maldives",
     country: "Maldives",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [73.511049, 4.178874],
@@ -442,6 +470,7 @@ const sampleListings = [
     price: 4000,
     location: "Aspen",
     country: "United States",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-106.819217, 39.190681],
@@ -458,6 +487,7 @@ const sampleListings = [
     price: 1800,
     location: "Costa Rica",
     country: "Costa Rica",
+    owner: "68fe6034d4a19bc524bba9df",
     geometry: {
       type: "Point",
       coordinates: [-84.200915, 10.257794],

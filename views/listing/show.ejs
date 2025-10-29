@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %>
 <script>
   const mapToken = "<%= process.env.MAP_TOKEN %>";
-  const listing = <%- JSON.stringify(listing)%>;
+  const listing = <%- JSON.stringify(listing.toObject ? listing.toObject() : listing) %>;
 
 </script>
 <div class="row mt-3">
@@ -15,7 +15,11 @@
       />
       <div class="card-body">
         <p class="card-text">
-          <p><b>Owned By: </b><%= listing.owner.username.charAt(0).toUpperCase() + listing.owner.username.slice(1) %></p>
+          <% if (listing.owner) { %>
+            <p><b>Owned By: </b><%= listing.owner.username.charAt(0).toUpperCase() + listing.owner.username.slice(1) %></p>
+          <% } else { %>
+            <p><b>Owned By: </b>Unknown</p>
+          <% } %>
           <p><b>Description:</b><br><%= listing.description %></p>
           <p><b>Price:</b>&nbsp;&#8377; <%= listing.price.toLocaleString("en-In") %> / night</p>
           <p><b>Location:</b>&nbsp;<%= listing.location %></p>
